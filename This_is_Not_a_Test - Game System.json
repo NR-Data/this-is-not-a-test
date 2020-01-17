@@ -1,0 +1,359 @@
+{
+  "gameSystem": {
+    "name": "This is Not a Test",
+    "id": "1e53-118f-384d-3d5a",
+    "authorName": "Ian O'Brien",
+    "battleScribeVersion": 2.03,
+    "revision": 17,
+    "type": "gameSystem",
+    "xmlns": "http://www.battlescribe.net/schema/gameSystemSchema",
+    "categoryEntries": [
+      {"name": "Leader", "id": "2742-f6e0-6cfd-0438", "hidden": false},
+      {"name": "Elite", "id": "db17-468b-a4ab-158d", "hidden": false},
+      {"name": "Rank and File", "id": "41a5-6287-0737-8014", "hidden": false},
+      {"name": "Specialist", "id": "8e1d-f802-edf5-1ac2", "hidden": false},
+      {"name": "Faction", "id": "8d56-a414-8c99-d01d", "hidden": false},
+      {"name": "Freelancer", "id": "7ad0-7249-819b-cc4c", "hidden": false}
+    ],
+    "costTypes": [{"name": "pts", "id": "points", "defaultCostLimit": 0}],
+    "forceEntries": [
+      {
+        "name": "Warband",
+        "id": "2083-3ad1-b1ec-abf4",
+        "hidden": false,
+        "categoryLinks": [
+          {
+            "name": "Leader",
+            "id": "2083-3ad1-b1ec-abf4-2742-f6e0-6cfd-0438",
+            "hidden": false,
+            "primary": false,
+            "targetId": "2742-f6e0-6cfd-0438",
+            "constraints": [
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "min",
+                "value": 1
+              },
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "name": "Elite",
+            "id": "2083-3ad1-b1ec-abf4-db17-468b-a4ab-158d",
+            "hidden": false,
+            "primary": false,
+            "targetId": "db17-468b-a4ab-158d",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 3
+              }
+            ]
+          },
+          {"name": "Rank and File", "id": "2083-3ad1-b1ec-abf4-41a5-6287-0737-8014", "hidden": false, "primary": false, "targetId": "41a5-6287-0737-8014"},
+          {
+            "name": "Specialist",
+            "id": "2083-3ad1-b1ec-abf4-8e1d-f802-edf5-1ac2",
+            "hidden": false,
+            "primary": false,
+            "targetId": "8e1d-f802-edf5-1ac2",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 0
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "maxSelections",
+                "type": "increment",
+                "value": 1,
+                "conditions": [
+                  {
+                    "childId": "any",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": false,
+                    "type": "atLeast",
+                    "value": 10
+                  }
+                ]
+              },
+              {
+                "field": "maxSelections",
+                "type": "increment",
+                "value": 1,
+                "conditions": [
+                  {
+                    "childId": "any",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": false,
+                    "type": "atLeast",
+                    "value": 13
+                  }
+                ]
+              },
+              {
+                "field": "maxSelections",
+                "type": "increment",
+                "value": 1,
+                "conditions": [
+                  {
+                    "childId": "any",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": false,
+                    "type": "atLeast",
+                    "value": 7
+                  }
+                ]
+              },
+              {
+                "field": "maxSelections",
+                "type": "increment",
+                "value": 1,
+                "conditions": [
+                  {
+                    "childId": "any",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": false,
+                    "type": "atLeast",
+                    "value": 16
+                  }
+                ]
+              },
+              {
+                "field": "maxSelections",
+                "type": "increment",
+                "value": 1,
+                "conditions": [
+                  {
+                    "childId": "any",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": false,
+                    "type": "atLeast",
+                    "value": 19
+                  }
+                ]
+              },
+              {
+                "field": "maxSelections",
+                "type": "increment",
+                "value": 1,
+                "conditions": [
+                  {
+                    "childId": "any",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": false,
+                    "type": "atLeast",
+                    "value": 21
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Faction",
+            "id": "2083-3ad1-b1ec-abf4-8d56-a414-8c99-d01d",
+            "hidden": false,
+            "primary": false,
+            "targetId": "8d56-a414-8c99-d01d",
+            "constraints": [
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "min",
+                "value": 1
+              },
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ]
+          },
+          {"name": "Freelancer", "id": "2083-3ad1-b1ec-abf4-7ad0-7249-819b-cc4c", "hidden": false, "primary": false, "targetId": "7ad0-7249-819b-cc4c"}
+        ],
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 1
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": true,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 24
+          }
+        ]
+      }
+    ],
+    "profileTypes": [
+      {
+        "name": "Melee Weapon",
+        "id": "d6fe-433d-51d6-204a",
+        "characteristicTypes": [
+          {"name": "Range - Melee", "id": "5d1b-619e-2a69-f924"},
+          {"name": "Range - Thrown", "id": "9a20-abf3-fcfc-8f07"},
+          {"name": "Strength", "id": "ef92-7bcd-59d6-dcca"},
+          {"name": "1H/2H", "id": "b1a4-dc49-dc4e-a319"},
+          {"name": "Special Rules", "id": "90f8-7f9d-1357-daf1"}
+        ]
+      },
+      {
+        "name": "Ranged Weapon",
+        "id": "232d-8609-4656-e6a9",
+        "characteristicTypes": [
+          {"name": "Max Range", "id": "c7c1-91bf-6327-c43e"},
+          {"name": "Strength", "id": "5ab0-e20a-98a4-4a21"},
+          {"name": "Reliability", "id": "1f89-7a5c-32fe-1ed2"},
+          {"name": "1H/2H", "id": "1c76-59b7-bc63-1d3a"},
+          {"name": "Special Rules", "id": "941b-2b2a-636d-23bd"}
+        ]
+      },
+      {
+        "name": "Grenades",
+        "id": "b5e3-7397-05f7-4ad6",
+        "characteristicTypes": [{"name": "Strength", "id": "fd5c-1cae-88c0-e179"}, {"name": "Special Rules", "id": "c6d0-9ce1-eeda-6667"}]
+      },
+      {
+        "name": "Armor",
+        "id": "fdd8-2587-a054-adc7",
+        "characteristicTypes": [
+          {"name": "Armor Bonus (Melee)", "id": "dc35-a295-7862-96b2"},
+          {"name": "Armor Bonus (Ranged)", "id": "7463-11b2-9116-825e"},
+          {"name": "Special Rules", "id": "d431-cb8e-b6f3-4ba9"}
+        ]
+      },
+      {
+        "name": "Relic Melee Weapon",
+        "id": "001e-0c8e-6674-4ca5",
+        "characteristicTypes": [
+          {"name": "Range - Melee", "id": "2847-9f4f-a9f4-2119"},
+          {"name": "Range - Thrown", "id": "c891-541f-47d5-ec59"},
+          {"name": "Strength", "id": "8eef-bd06-288e-f910"},
+          {"name": "Reliability", "id": "0e78-286a-3921-5068"},
+          {"name": "1H/2H", "id": "c614-c8aa-a43d-0de8"},
+          {"name": "Special Rules", "id": "b115-7203-20f6-70a7"},
+          {"name": "Scarcity", "id": "f7ed-fcdf-6e3f-0e16"}
+        ]
+      },
+      {
+        "name": "Relic Ranged Weapons",
+        "id": "761f-1e29-a19a-5cc6",
+        "characteristicTypes": [
+          {"name": "Max Range", "id": "416c-5f0a-ad6d-f468"},
+          {"name": "Strength", "id": "17cf-01c6-1de9-f7fb"},
+          {"name": "Reliability", "id": "153a-5db8-9d29-e9f8"},
+          {"name": "1H/2H", "id": "5abb-cd82-a4da-8ce3"},
+          {"name": "Special Rules", "id": "b60c-6688-00d4-ad7d"},
+          {"name": "Rarity", "id": "f4f6-d2b9-21cf-b3ed"}
+        ]
+      },
+      {
+        "name": "Relic Grenades",
+        "id": "4464-ce7a-ce1b-c30f",
+        "characteristicTypes": [{"name": "Strength", "id": "8166-85a0-bcbc-b421"}, {"name": "Special Rules", "id": "6ec3-932f-0a5f-5369"}, {"name": "Rarity", "id": "03d7-3a3b-edc7-cabc"}]
+      },
+      {
+        "name": "Relic Armor",
+        "id": "f14b-ae9b-94e9-4603",
+        "characteristicTypes": [
+          {"name": "Armor Bonus (Melee)", "id": "1ddd-fe0e-5854-0410"},
+          {"name": "Armor Bonus (Ranged)", "id": "aefc-89ae-cc13-0427"},
+          {"name": "Special Rules", "id": "c420-cc09-e7b6-320d"},
+          {"name": "Rarity", "id": "8e44-6b17-0472-a29e"}
+        ]
+      },
+      {
+        "name": "Model",
+        "id": "af73-9467-8537-a3f4",
+        "characteristicTypes": [
+          {"name": "Type", "id": "83f1-899b-6509-e2dc"},
+          {"name": "Defense", "id": "4def-4bef-e42a-f262"},
+          {"name": "Wounds", "id": "757b-36ba-5f57-60eb"},
+          {"name": "Move", "id": "fd71-598a-c83d-d09c"},
+          {"name": "Melee", "id": "ad0e-179a-f54c-2641"},
+          {"name": "Ranged", "id": "1978-8261-8449-edbe"},
+          {"name": "Strength", "id": "fe7d-78b8-51a6-e356"},
+          {"name": "Mettle", "id": "4b87-a423-c470-af39"}
+        ]
+      }
+    ]
+  }
+}
